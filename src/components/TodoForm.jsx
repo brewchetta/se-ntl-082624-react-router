@@ -1,11 +1,20 @@
 import { useState } from 'react'
 
-function TodoForm() {
+function TodoForm({ addTodo }) {
 
     const [name, setName] = useState('')
 
     function handleSubmit(e) {
         e.preventDefault()
+
+        fetch('http://localhost:3000/todos', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify({ name, likes: 0 })
+        })
+        .then(res => res.json())
+        .then(data => addTodo(data))
+        .catch(err => console.log(err))
     }
 
     return (
