@@ -28,6 +28,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  padding: 2em;
 }
 
 h1 {
@@ -65,4 +66,14 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+  .todo-item {
+    background-color: #f9f9f9;
+  }
+}
+
+.todo-item {
+  padding: 1em;
+  background-color: #213547;
+  margin-top: 2em;
+  border-radius: 10px;
 }
