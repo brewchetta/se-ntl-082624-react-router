@@ -15,11 +15,11 @@ function TodoContainer() {
     }, [])
 
     function addTodo(todoObj) {
-        setTodos([...todos, todoObj])
+        setTodos([...todos, todoObj]) // SPREAD OPERATOR TO ADD A NEW ITEM WITHOUT MUTATING STATE
     }
 
     function updateTodo(patchedTodoObj) {
-        const updatedTodos = todos.map(todo => {
+        const updatedTodos = todos.map(todo => { // THE .map ALLOWS US TO CHANGE A SINGLE ENTRY AND ALSO CREATE A NEW ARRAY
             if (todo.id !== patchedTodoObj.id) {
                 return todo
             } else {
@@ -31,7 +31,7 @@ function TodoContainer() {
     }
 
     function deleteTodo(id) {
-        const filteredTodos = todos.filter(todo => todo.id !== id)
+        const filteredTodos = todos.filter(todo => todo.id !== id) // FILTER WILL FILTER OUT AN ITEM BASED ON ID AND MAKE A NEW ARRAY
         setTodos(filteredTodos)
     }
 
