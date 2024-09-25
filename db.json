@@ -3,7 +3,7 @@
     {
       "id": "1",
       "name": "Finish todo list app",
-      "likes": 3
+      "likes": 7
     },
     {
       "id": "2",
@@ -14,6 +14,31 @@
       "id": "3",
       "name": "Relax",
       "likes": 1000
+    },
+    {
+      "id": "3348",
+      "name": "Feed cats",
+      "likes": 0
+    },
+    {
+      "id": "d742",
+      "name": "Make lunch",
+      "likes": 0
+    },
+    {
+      "id": "c596",
+      "name": "Make a network request",
+      "likes": 0
+    },
+    {
+      "id": "3f39",
+      "name": "Eat",
+      "likes": 0
+    },
+    {
+      "id": "bd86",
+      "name": "Do laundry",
+      "likes": 0
     }
   ]
 }

@@ -1,14 +1,14 @@
 import Header from "./Header"
-import TodoContainer from "./TodoContainer"
-import About from "./About"
+// import TodoContainer from "./TodoContainer"
+// import About from "./About"
+import { Outlet } from 'react-router-dom'
 
 function App() {
 
   return (
     <>
       <Header />
-      <TodoContainer />
-      <About />
+      <Outlet />
     </>
   )
 }

@@ -1,6 +1,9 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 function TodoForm({ addTodo }) {
+
+    const navigate = useNavigate()
 
     const [name, setName] = useState('')
 
@@ -13,7 +16,7 @@ function TodoForm({ addTodo }) {
             body: JSON.stringify({ name, likes: 0 })
         })
         .then(res => res.json())
-        .then(data => addTodo(data))
+        .then(() => navigate('/'))
         .catch(err => console.log(err))
     }
 
