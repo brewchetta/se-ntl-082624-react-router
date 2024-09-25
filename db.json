@@ -3,7 +3,17 @@
     {
       "id": "1",
       "name": "Finish todo list app",
-      "likes": 25
+      "likes": 3
+    },
+    {
+      "id": "2",
+      "name": "Add react router",
+      "likes": 2
+    },
+    {
+      "id": "3",
+      "name": "Relax",
+      "likes": 1000
     }
   ]
 }

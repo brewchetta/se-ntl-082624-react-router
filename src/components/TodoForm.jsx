@@ -13,7 +13,7 @@ function TodoForm({ addTodo }) {
             body: JSON.stringify({ name, likes: 0 })
         })
         .then(res => res.json())
-        .then(data => addTodo(data)) // WE NEED TO WAIT FOR THIS TO COME BACK BC IT WILL HAVE AN ID!
+        .then(data => addTodo(data))
         .catch(err => console.log(err))
     }
 

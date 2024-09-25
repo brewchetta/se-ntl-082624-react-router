@@ -1,11 +1,14 @@
+import Header from "./Header"
 import TodoContainer from "./TodoContainer"
+import About from "./About"
 
 function App() {
 
   return (
     <>
-      <h1>Advanced Fetch Requests + React</h1>
+      <Header />
       <TodoContainer />
+      <About />
     </>
   )
 }

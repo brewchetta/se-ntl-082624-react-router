@@ -6,7 +6,6 @@ function TodoContainer() {
 
     const [todos, setTodos] = useState([])
 
-    
     useEffect(() => {
         fetch('http://localhost:3000/todos')
         .then(res => res.json())
@@ -15,23 +14,16 @@ function TodoContainer() {
     }, [])
 
     function addTodo(todoObj) {
-        setTodos([...todos, todoObj]) // SPREAD OPERATOR TO ADD A NEW ITEM WITHOUT MUTATING STATE
+        setTodos([...todos, todoObj])
     }
 
     function updateTodo(patchedTodoObj) {
-        const updatedTodos = todos.map(todo => { // THE .map ALLOWS US TO CHANGE A SINGLE ENTRY AND ALSO CREATE A NEW ARRAY
-            if (todo.id !== patchedTodoObj.id) {
-                return todo
-            } else {
-                return patchedTodoObj
-            }
-        })
-
+        const updatedTodos = todos.map(todo => todo.id !== patchedTodoObj.id ? todo : patchedTodoObj)
         setTodos(updatedTodos)
     }
 
     function deleteTodo(id) {
-        const filteredTodos = todos.filter(todo => todo.id !== id) // FILTER WILL FILTER OUT AN ITEM BASED ON ID AND MAKE A NEW ARRAY
+        const filteredTodos = todos.filter(todo => todo.id !== id)
         setTodos(filteredTodos)
     }
 
